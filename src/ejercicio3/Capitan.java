@@ -69,7 +69,7 @@ public class Capitan extends Tripulante{
 	public void setBono(float bono) {
 		this.bono = bono;
 	}
-
+	//Implementado por Ever
 	void sueldo() {
 		
 	}
