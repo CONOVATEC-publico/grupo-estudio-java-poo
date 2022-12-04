@@ -9,11 +9,13 @@ public class Principal {
 		
 		//Capitan capitan =  new Capitan(7246, 40, 10, "Miguel Grau", "28888",'M' , barco1, 8, Capitan.sueldo, 200.4f);
 		Capitan capitan2 =  new Capitan(7246, 40, 10, "Miguel Grau", "28888",'M' , barco1, 8, 200.4f);
-		JefeDeFlota jefe=new JefeDeFlota(777, 50, 15, "Jack Sparrow", "5555", 'M', barco1, 1000, 60000, 70000, 20f, 30f);
+		JefeDeFlota jefe=new JefeDeFlota(777, 50, 15, "Jack Sparrow", "5555", 'M', barco1, 1000, 60000, 70000, 20f);
 		
 		System.out.println(barco1.toString());
 		System.out.println(gps.toString());
 		System.out.println(capitan2.toString());
+		jefe.mostrarDatos();
+		
 	}
 
 }
