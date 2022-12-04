@@ -1,10 +1,11 @@
 package ejercicio3;
 
-public class JefeDeFlota extends Tripulante{
+public class JefeDeFlota extends Tripulante {
 
 	int pesoPescado;
-	int sueldo=3500000;
-	int sueldoTotal;
+	int pesoMariscos;
+	final int sueldo = 3500000;
+	float sueldoTotal;
 	float bonoPescado;
 	float bonoMariscos;
 
@@ -17,17 +18,15 @@ public class JefeDeFlota extends Tripulante{
 	 * @param sexo
 	 * @param barco
 	 * @param pesoPescado
-	 * @param sueldo
-	 * @param sueldoTotal
+	 * @param pesoMariscos
 	 * @param bonoPescado
 	 * @param bonoMariscos
 	 */
 	public JefeDeFlota(int dni, int edad, int tiempoEmpresa, String nombre, String telefono, char sexo, Barco barco,
-			int pesoPescado, int sueldo, int sueldoTotal, float bonoPescado, float bonoMariscos) {
+			int pesoPescado, int pesoMariscos, float bonoPescado, float bonoMariscos) {
 		super(dni, edad, tiempoEmpresa, nombre, telefono, sexo, barco);
 		this.pesoPescado = pesoPescado;
-		this.sueldo = sueldo;
-		this.sueldoTotal = sueldoTotal;
+		this.pesoMariscos = pesoMariscos;
 		this.bonoPescado = bonoPescado;
 		this.bonoMariscos = bonoMariscos;
 	}
@@ -41,14 +40,9 @@ public class JefeDeFlota extends Tripulante{
 	public int getSueldo() {
 		return sueldo;
 	}
-	public void setSueldo(int sueldo) {
-		this.sueldo = sueldo;
-	}
-	public int getSueldoTotal() {
+	public float getSueldoTotal() {
+		this.sueldo();
 		return sueldoTotal;
-	}
-	public void setSueldoTotal(int sueldoTotal) {
-		this.sueldoTotal = sueldoTotal;
 	}
 	public float getBonoPescado() {
 		return bonoPescado;
@@ -62,23 +56,29 @@ public class JefeDeFlota extends Tripulante{
 	public void setBonoMariscos(float bonoMariscos) {
 		this.bonoMariscos = bonoMariscos;
 	}
-	
-	void calcularBonos() {
-		
+	float calcularBonos() {
+		return this.bonoPescado + this.bonoMariscos * 2;
 	}
 
 	@Override
 	void sueldo() {
-		// TODO Auto-generated method stub
-		
+		this.sueldoTotal = this.sueldo + this.calcularBonos();
 	}
 
 	@Override
 	void mostrarDatos() {
-		// TODO Auto-generated method stub
-		
+		System.out.println();
+		System.out.println("Datos del Jefe de Flota");
+		System.out.println(" Numero de Carnet: " + this.dni);
+		System.out.println(" Nombre: " + this.nombre);
+		System.out.println(" Sexo: " + this.sexo);
+		System.out.println(" Edad: " + this.edad);
+		System.out.println(" Telefono: " + this.telefono);
+		System.out.println(" Tiempo en la Empresa: " + this.tiempoEmpresa + " años");
+		System.out.println(" Sueldo Base: " + (float)this.sueldo);
+		System.out.println(" Bono por Pescado: " + this.bonoPescado);
+		System.out.println(" Bono por Marisco y Molusco: " + this.bonoMariscos*2);
+		System.out.println(" Sueldo Total: " + this.getSueldoTotal());
+		System.out.println();
 	}
-	
-	
-	
 }
