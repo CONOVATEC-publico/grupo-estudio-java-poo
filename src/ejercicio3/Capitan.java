@@ -69,23 +69,38 @@ public class Capitan extends Tripulante{
 	public void setBono(float bono) {
 		this.bono = bono;
 	}
-
-	void sueldo() {
-		
+	//Implementado por Ever
+	void sueldo(int sueldo) {
+		this.sueldo = sueldo;
 	}
 	
 	void mostrarDatos() {
 		
 	}
 
-	void calcularBono() {
-		
+	void calcularBono(double bono) {
+		if (horas >= 5000 && horas < 150000){
+			bono = (0.20*sueldo); 
+		}
+		else if (horas >= 150000 && horas < 300000) {
+			bono = (0.40*sueldo);
+		}
+		else if (horas >= 300000) {
+			bono = (0.75*sueldo);
+		}
 	}
 
 
 	@Override
 	public String toString() {
 		return "Capitan ["+"dni=" +dni+"edad=" +edad+"tiempoEmpresa=" +tiempoEmpresa+"nombre=" +nombre+",horas=" + horas + ", sueldo=" + sueldo + ", bono=" + bono + "]";
+	}
+
+
+	@Override
+	void sueldo() {
+		// TODO Auto-generated method stub
+		
 	}
 	
 	
