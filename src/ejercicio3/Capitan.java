@@ -1,5 +1,7 @@
 package ejercicio3;
 
+import java.util.Scanner;
+
 public class Capitan extends Tripulante{
 	int horas;
 	//static final int sueldo=2500000;
@@ -74,10 +76,25 @@ public class Capitan extends Tripulante{
 		this.sueldo = sueldo;
 	}
 	
-	void mostrarDatos() {
+	void mostrarDatos(int horas) {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Ingrese las horas de trabajo:");
+		horas = sc.nextInt();
+		System.out.println(horas);
+		double suma_sueldo = 0; //creamos el acumulador
 		
+		sueldo();
+		double sueld = sc.nextDouble();
+		suma_sueldo = suma_sueldo + sueld;
+		
+		calcularBono(bono);
+		double bon = sc.nextDouble();
+		suma_sueldo = suma_sueldo + bon;
+		System.out.println("El sueldo total es:"+suma_sueldo);
+		
+				
 	}
-
+		
 	void calcularBono(double bono) {
 		if (horas >= 5000 && horas < 150000){
 			bono = (0.20*sueldo); 
@@ -99,6 +116,13 @@ public class Capitan extends Tripulante{
 
 	@Override
 	void sueldo() {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	void mostrarDatos() {
 		// TODO Auto-generated method stub
 		
 	}
