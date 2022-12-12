@@ -60,15 +60,15 @@ public class Marinero extends Tripulante {
     @Override
     void mostrarDatos() {
         System.out.println();
-		System.out.println("Datos del Marinero");
-		System.out.println(" Numero de Carnet: " + this.dni);
-		System.out.println(" Nombre: " + this.nombre);
-		System.out.println(" Sexo: " + this.sexo);
-		System.out.println(" Edad: " + this.edad);
-		System.out.println(" Telefono: " + this.telefono);
-		System.out.println(" Tiempo en la Empresa: " + this.tiempoEmpresa + " años");
-		System.out.println(" Monto del bono: " + this.calcularBono());
-		System.out.println(" Sueldo Total: " + this.getSueldoTotal());
-		System.out.println();
+        System.out.println("Datos del Marinero");
+        System.out.println(" Numero de Carnet: " + this.dni);
+        System.out.println(" Nombre: " + this.nombre);
+        System.out.println(" Sexo: " + this.sexo);
+        System.out.println(" Edad: " + this.edad);
+        System.out.println(" Telefono: " + this.telefono);
+        System.out.println(" Tiempo en la Empresa: " + this.tiempoEmpresa + " años");
+        System.out.println(" Monto del bono: " + this.calcularBono());
+        System.out.println(" Sueldo Total: " + this.getSueldoTotal());
+        System.out.println();
     }
 }
