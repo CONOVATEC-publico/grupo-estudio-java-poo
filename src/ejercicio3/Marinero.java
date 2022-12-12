@@ -35,7 +35,8 @@ public class Marinero extends Tripulante {
         return sueldo;
     }
     public float getSueldoTotal() {
-        return this.sueldo + this.calcularBono();
+        this.sueldo();
+        return this.sueldoTotal;
     }
     public float getBono() {
         return bono;
